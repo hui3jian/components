@@ -1,12 +1,48 @@
-/*
- *  配色方案
- */
- // 第一种 （默认主题色）
-$color-primary-01: #409eff;
-$color-success-01: #67c23a;
-$color-info-01: #909399;
-$color-warning-01: #e6a23c;
-$color-danger-01: #f56c6c;
+// 大小尺寸
+@import './size';
 
-$color-text-primary-01: #303133;
-$color-
+// 配色方案
+@import './color';
+$color-primary: $color-primary-01;
+$color-success: $color-success-01;
+$color-info   : $color-info-01;
+$color-warning: $color-warning-01;
+$color-danger : $color-danger-01;
+
+$color-text-primary    : $color-text-primary-01;
+$color-text-regular    : $color-text-regular-01;
+$color-text-secondary  : $color-text-secondary-01;
+$color-text-placeholder: $color-text-placeholder-01;
+
+$border-color-base       : $border-color-base-01;
+$border-color-light      : $border-color-light-01;
+$border-color-lighter    : $border-color-lighter-01;
+$border-color-extra-light: $border-color-extra-light-01;
+
+$color-white          : $color-white-01;
+$color-black          : $color-black-01;
+$background-color-base: $background-color-base-01;
+
+
+/* panel var */
+$panel-width         : 200px;
+$panel-header-padding: 10px 15px;
+$panel-body-padding  : 15px;
+
+/* breadcrumb */
+$breadcrumb-font: 14px;
+$breadcrumb-color: #939495;
+$breadcrumb-color-active: #222222;
+
+/* reset css */
+ul {
+  margin : 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* plugin */
+@import './plugin/animate.min.scss'

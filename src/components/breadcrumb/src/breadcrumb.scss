@@ -1,0 +1,34 @@
+@import '~@/assets/style/public';
+@import '~@/assets/style/mixins';
+
+.jy-breadcrumb {
+  display        : flex;
+  justify-content: flex-start;
+
+  a {
+    text-decoration: none;
+    ;
+  }
+}
+
+.jy-breadcrumb__title {
+  font-size: 14px;
+  color    : $breadcrumb-color;
+
+  &.is-active {
+    color : $breadcrumb-color-active;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.jy-breadcrumb__separator {
+  padding: 0 5px;
+
+  i {
+    font-size: 14px;
+  }
+}

@@ -1,9 +1,13 @@
 <template>
   <button
     class="jy-buttom"
+    :disabled="disabled"
     :class="[
-      type ? 'jy-buttom--' + type : '',
-      size ? 'jy-buttom--' + size : '',
+      type ? 'jy-buttom--type__' + type : '',
+      size ? 'jy-buttom--size__' + size : '',
+      round ? 'jy-buttom--round' : '',
+      circle ? 'jy-buttom--circle' : '',
+      disabled ? 'jy-buttom--disabled' : '',
     ]"
   >
     <!-- 加载中图标... -->
@@ -43,12 +47,38 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
       default: '',
       type: String,
       desc: "后置图标"
+    },
+    size: {
+      default: '',
+      type: String,
+      desc: "尺寸：可选参数 ———— small | base(或者不填) | medium | large"
+    },
+    type: {
+      default: '',
+      type: String,
+      desc: "类型：可选参数 ———— 或者不填 | primary | success | info | warning | danger"
+    },
+    round: {
+      default: false,
+      type: Boolean,
+      desc: "是否圆角： 可选参数 ———— true | false"
+    },
+    circle: {
+      default: false,
+      type: Boolean,
+      desc: "是否圆型： 可选参数 ———— true | false"
+    },
+    disabled: {
+      default: false,
+      type: Boolean,
+      desc: "禁用状态： 可选参数 ———— true | false"
     }
   }
 })
 export default class Buttom extends Vue {
-  private mounted() {
-   console.log(this.$slots.default)
-  }
 }
 </script>
+
+<style lang="scss">
+  @import './button';
+</style>
